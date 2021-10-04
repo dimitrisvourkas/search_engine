@@ -19,7 +19,7 @@ public class SearchServiceImpl implements SearchService{
     @Override
     public List<Result> getResults(String sQuery) {
         try {
-            String cx = "084b319f24d93bead"; //My search engine
+            String cx = "searchEngineID"; //My search engine
             HttpRequestInitializer httpRequestInitializer = request -> {
             };
             NetHttpTransport netHttpTransport = new NetHttpTransport();
@@ -30,7 +30,7 @@ public class SearchServiceImpl implements SearchService{
             CustomSearchAPI.Cse.List list = cs.cse().list();
             list.setCx(cx);
             list.setQ(sQuery);
-            list.setKey("AIzaSyAzr5nSMmAkVvWtW37Kqy45qWjgKP1lL-8");
+            list.setKey("googleAuthKey");
             list.setNum(10);
 
             //Execute search
